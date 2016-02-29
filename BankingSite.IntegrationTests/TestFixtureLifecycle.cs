@@ -19,7 +19,8 @@ namespace BankingSite.IntegrationTests
             // When not running inside MVC application the |DataDirectory| placeholder 
             // is null in a connection string, e.g AttachDBFilename=|DataDirectory|\TestBankingSiteDb.mdf
 
-            AppDomain.CurrentDomain.SetData("DataDirectory", NUnit.Framework.TestContext.CurrentContext.TestDirectory);
+            //AppDomain.CurrentDomain.SetData("DataDirectory", NUnit.Framework.TestContext.CurrentContext.TestDirectory);
+            AppDomain.CurrentDomain.SetData("DefaultConnection", NUnit.Framework.TestContext.CurrentContext.TestDirectory);
         }
 
         private void EnsureNoExistingDatabaseFiles()
