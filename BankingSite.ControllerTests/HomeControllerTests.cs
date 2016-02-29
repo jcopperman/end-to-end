@@ -9,11 +9,11 @@ namespace BankingSite.ControllerTests
     public class HomeControllerTests
     {
         [Test]
-        public void ShouldRedirectToPluralsightForContact()
+        public void ShouldRedirectToLocalHostForContact()
         {
             var sut = new HomeController();
 
-            sut.WithCallTo(x => x.Contact()).ShouldRedirectTo("http://pluralsight.com");
+            sut.WithCallTo(x => x.Contact()).ShouldRedirectTo("http://localhost");
         }
     }
 }

@@ -22,7 +22,7 @@ namespace BankingSite.Controllers
 
         public ActionResult Contact()
         {
-            return Redirect("");
+            return Redirect("http://localhost");
         }
     }
 }
